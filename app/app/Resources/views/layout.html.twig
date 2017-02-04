@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title '' %} - My Symfony Application</title>
+
+    <link href="{{ asset('bundles/app/components/uikit/css/uikit.almost-flat.min.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('bundles/app/components/font-awesome/css/font-awesome.min.css') }}">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+{% block content %}{% endblock %}
+
+<script src="{{ asset('bundles/app/components/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ asset('bundles/app/components/uikit/js/uikit.min.js') }}"></script>
+</body>
+</html>
