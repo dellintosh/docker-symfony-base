@@ -1,0 +1,5 @@
+#!/usr/bin/execlineb -P
+
+with-contenv
+s6-setuidgid 82:82
+exec /usr/local/bin/composer install -d /var/www/symfony --ansi

@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build: .
+    # env_file: .env
+    volumes:
+      - ./app:/var/www/symfony
+    ports:
+      - "80:80"
+    environment:
+      SYMFONY_DEBUG: 1
+      SYMFONY_ENV: dev
